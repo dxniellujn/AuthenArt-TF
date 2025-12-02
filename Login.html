@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AuthenArt - Login</title>
+
+    <link rel="stylesheet" href="Login.css" />
+  </head>
+
+  <body>
+    <div class="login-wrapper">
+      <!-- IMAGEN IZQUIERDA -->
+      <div class="login-image">
+        <img src="Img/Mediofondo -  authenArt.jpg" alt="Obra de arte" />
+      </div>
+
+      <!-- PANEL DERECHO (CENTRADO) -->
+      <div class="login-panel">
+        <img
+          src="Img/AuthenArt - Logo.jpg"
+          alt="AuthenArt"
+          class="login-logo"
+        />
+
+        <h2>Iniciar Sesión</h2>
+
+        <form id="loginForm" class="login-form">
+          <label for="loginUser">Usuario</label>
+          <input type="text" id="loginUser" placeholder="Usuario" />
+
+          <label for="loginPassword">Contraseña</label>
+          <input type="password" id="loginPassword" placeholder="Contraseña" />
+
+          <button type="submit" class="login-button">Entrar</button>
+        </form>
+
+        <div class="social-login">
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/281/281764.png"
+            alt="Google"
+            class="social-icon"
+          />
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/733/733547.png"
+            alt="Facebook"
+            class="social-icon"
+          />
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/733/733579.png"
+            alt="Twitter"
+            class="social-icon"
+          />
+        </div>
+      </div>
+    </div>
+
+    <script src="Login.js"></script>
+  </body>
+</html>

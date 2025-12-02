@@ -1,0 +1,266 @@
+:root {
+  --primary: #1a4d8f;
+  --accent: #e6522c;
+  --bg: #f4f4f4;
+  --text-main: #222;
+  --text-muted: #666;
+}
+
+/* Layout general */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text-main);
+}
+
+/* SIDEBAR */
+
+.sidebar {
+  width: 260px;
+  height: 100vh;
+  background: var(--primary);
+  color: #ffffff;
+  padding: 20px;
+  box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  transform: translateX(0);
+  transition: transform 0.25s ease;
+  z-index: 1000;
+}
+
+.sidebar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sidebar-header h2 {
+  margin: 0;
+}
+
+.username {
+  margin: 10px 0 20px 0;
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+/* Menú lateral */
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: auto;
+}
+
+.menu-item {
+  text-decoration: none;
+  color: #ffffff;
+  padding: 10px 12px;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  transition: background 0.2s, transform 0.1s;
+}
+
+.menu-item:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateX(2px);
+}
+
+.menu-item.active {
+  background: var(--accent);
+}
+
+/* Botón logout */
+
+.logout-btn {
+  margin-top: 20px;
+  padding: 10px;
+  border: none;
+  width: 100%;
+  border-radius: 6px;
+  background: var(--accent);
+  color: #ffffff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.logout-btn:hover {
+  background: #c34222;
+}
+
+/* CONTENIDO PRINCIPAL */
+
+.content {
+  margin-left: 260px;
+  padding: 30px;
+  box-sizing: border-box;
+}
+
+.content-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 10px;
+}
+
+.content-header h1 {
+  margin: 0;
+  font-size: 28px;
+}
+
+.subtitle {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+/* Icon buttons (hamburger / close) */
+
+.icon-btn {
+  border: none;
+  background: transparent;
+  color: inherit;
+  font-size: 1.4rem;
+  cursor: pointer;
+  display: none; /* solo en móvil */
+}
+
+/* PANEL GENÉRICO */
+
+.panel {
+  margin-top: 35px;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.panel h2 {
+  margin-top: 0;
+}
+
+/* 🔽 FORMULARIO REGISTRAR OBRA */
+
+.register-panel {
+  margin-top: 30px;
+}
+
+.register-intro {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-bottom: 15px;
+}
+
+.register-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-row {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-row-inline {
+  flex-direction: row;
+  align-items: center;
+}
+
+.register-form label {
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.register-form input[type="text"],
+.register-form input[type="number"],
+.register-form input[type="file"],
+.register-form textarea {
+  padding: 8px 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 0.9rem;
+  box-sizing: border-box;
+  background: #fafafa;
+}
+
+.register-form textarea {
+  resize: vertical;
+}
+
+.submit-btn {
+  margin-top: 10px;
+  padding: 10px 16px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  background: var(--primary);
+  color: #ffffff;
+  font-size: 0.9rem;
+  transition: background 0.2s, transform 0.1s;
+}
+
+.submit-btn:hover {
+  background: #163d70;
+  transform: translateY(-1px);
+}
+
+/* =========================
+        RESPONSIVE
+   ========================= */
+
+/* Móviles y pantallas pequeñas */
+@media (max-width: 768px) {
+  .sidebar {
+    transform: translateX(-100%);
+    width: 250px;
+  }
+
+  .sidebar.open {
+    transform: translateX(0);
+    box-shadow: 4px 0 12px rgba(0, 0, 0, 0.25);
+  }
+
+  .content {
+    margin-left: 0;
+    padding: 20px;
+  }
+
+  .menu-btn {
+    display: inline-block;
+    color: var(--primary);
+  }
+
+  .close-btn {
+    display: inline-block;
+    color: #fff;
+  }
+
+  .content-header {
+    justify-content: flex-start;
+  }
+
+  .form-row-inline {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+/* Muy pequeño */
+@media (max-width: 480px) {
+  .content-header h1 {
+    font-size: 22px;
+  }
+
+  .subtitle {
+    display: block;
+    margin-top: 4px;
+  }
+}

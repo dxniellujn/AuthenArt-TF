@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AuthenArt</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="Login.css" />
+    <!-- menu_toggle.css opcional, pero ya manejamos el responsive en styles.css -->
+  </head>
+  <body>
+    <header>
+      <nav class="top-header">
+        <a href="#inicio" class="logo">
+          <img width="80" src="Img/AuthenArt - Logo.jpg" alt="Logo AuthenArt" />
+        </a>
+
+        <!-- BOTÓN HAMBURGUESA -->
+        <button class="menu-toggle" aria-label="Abrir menú">&#9776;</button>
+
+        <ul class="Menu-horizontal">
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#sobre-nosotros">Sobre nosotros</a></li>
+          <li><a href="#contacto">Contáctanos</a></li>
+        </ul>
+
+        <ul class="Login">
+          <li><a href="Login.html">Iniciar Sesión</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <!-- HERO / INICIO -->
+      <section class="Inicio" id="inicio">
+        <div class="Imagen">
+          <img
+            src="Img/Mediofondo -  authenArt.jpg"
+            alt="Arte digital AuthenArt"
+          />
+        </div>
+        <div class="Informacion">
+          <h1>Protege y verifica tu arte digital con confianza</h1>
+          <p>
+            Registra, certifica y verifica tus obras en segundos con
+            autenticidad digital y códigos QR únicos.
+          </p>
+
+          <ul class="R-obra">
+            <li>Sube aquí tu primera obra</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- SOBRE NOSOTROS -->
+      <section class="SobreNosotros" id="sobre-nosotros">
+        <img
+          src="Img/fondo authenArt.webp"
+          alt=""
+          class="fondo-sobre-nosotros"
+        />
+
+        <div class="sobre-contenedor">
+          <h2>Somos Nosotros</h2>
+
+          <p class="sobre-descripcion">
+            Somos AuthenArt, una startup peruana que busca proteger y dar valor
+            al arte digital mediante una plataforma accesible y segura para
+            artistas, coleccionistas y galerías.
+          </p>
+
+          <div class="tarjetas">
+            <div class="tarjeta">
+              <h3>Misión</h3>
+              <p>
+                Ofrecer a los artistas una plataforma simple y segura para
+                registrar y autenticar sus obras digitales.
+              </p>
+            </div>
+
+            <div class="tarjeta">
+              <h3>Visión</h3>
+              <p>
+                Ser la empresa líder en Latinoamérica en autenticación de arte
+                digital y protección de derechos de autor.
+              </p>
+            </div>
+
+            <div class="tarjeta">
+              <h3>Valores</h3>
+              <p>
+                Innovación, confianza, seguridad y accesibilidad para todos los
+                usuarios.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FORMULARIO CONTACTO -->
+      <div class="container-Formulario" id="contacto">
+        <section class="Inscripcion-Section">
+          <div class="Container-Inscripcion">
+            <form id="contactForm" name="frm" method="post" action="">
+              <fieldset id="form">
+                <legend>Formulario de Contacto</legend>
+
+                <label for="fname">Nombre completo:</label>
+                <input
+                  type="text"
+                  id="fname"
+                  name="fname"
+                  placeholder="Tu nombre completo"
+                />
+
+                <label for="femail">Correo electrónico:</label>
+                <input
+                  type="email"
+                  id="femail"
+                  name="femail"
+                  placeholder="correo@ejemplo.com"
+                />
+
+                <label for="fcontacto">Motivo de contacto:</label>
+                <input
+                  type="text"
+                  id="fcontacto"
+                  name="fcontacto"
+                  placeholder="¿Sobre qué deseas comunicarte?"
+                />
+
+                <div class="check-line">
+                  <input type="checkbox" id="newsletter" />
+                  <label for="newsletter">
+                    Deseo recibir novedades y actualizaciones de AuthenArt
+                  </label>
+                </div>
+
+                <button type="submit" class="btn-form-insc">
+                  Enviar mensaje
+                </button>
+              </fieldset>
+            </form>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <!-- PIE DE PAGINA -->
+    <section id="footer">
+      <footer class="footer">
+        <div class="footer-container">
+          <!-- Logo y nombre de sitio -->
+          <div class="footer-brand">
+            <p>AuthenArt</p>
+            <small>© 2025 Todos los derechos reservados</small>
+          </div>
+
+          <!-- Enlaces legales -->
+          <div class="footer-links">
+            <h4>Legal</h4>
+            <a href="/Documentos/3.politica-privacidad.pdf"
+              >Política de Privacidad</a
+            >
+            <a href="#">Términos y Condiciones</a>
+            <a href="/Documentos/LeyProteccionDatos.pdf">Protección de Datos</a>
+          </div>
+
+          <!-- Redes sociales con íconos personalizados -->
+          <div class="footer-social">
+            <h4>Síguenos</h4>
+            <a href="#">
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/145/145802.png"
+                alt="Facebook"
+                class="social-icon"
+              />
+            </a>
+            <a href="#">
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/145/145812.png"
+                alt="Instagram"
+                class="social-icon"
+              />
+            </a>
+            <a href="#">
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/145/145807.png"
+                alt="LinkedIn"
+                class="social-icon"
+              />
+            </a>
+            <a href="#">
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/145/145806.png"
+                alt="Twitter"
+                class="social-icon"
+              />
+            </a>
+          </div>
+        </div>
+      </footer>
+    </section>
+
+    <script src="JavaScript.js"></script>
+  </body>
+</html>

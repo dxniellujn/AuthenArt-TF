@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Registrar obra - AuthenArt</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="RegistrarObra.css" />
+  </head>
+  <body>
+    <!-- MENÚ LATERAL -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <h2>AuthenArt</h2>
+        <button id="closeSidebar" class="icon-btn close-btn">✕</button>
+      </div>
+
+      <p id="username" class="username"></p>
+
+      <nav class="menu">
+        <!-- Resumen vuelve al dashboard -->
+        <a href="Dashboard.html" class="menu-item">Resumen</a>
+        <!-- ESTA PÁGINA -->
+        <a href="RegistrarObra.html" class="menu-item active">Registrar obra</a>
+        <a href="#" class="menu-item">Mis obras</a>
+        <a href="#" class="menu-item">Verificar autenticidad</a>
+        <a href="#" class="menu-item">Reportes</a>
+      </nav>
+
+      <button id="logoutBtn" class="logout-btn">Cerrar sesión</button>
+    </aside>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="content">
+      <header class="content-header">
+        <button id="toggleSidebar" class="icon-btn menu-btn">☰</button>
+        <div>
+          <h1>Registrar obra</h1>
+          <span class="subtitle"
+            >Añade una nueva obra al sistema de autenticación</span
+          >
+        </div>
+      </header>
+
+      <section class="panel register-panel">
+        <h2>Datos de la obra</h2>
+        <p class="register-intro">
+          Completa los campos para registrar la obra y generar su certificado
+          digital.
+        </p>
+
+        <form class="register-form" id="obraForm">
+          <div class="form-row">
+            <label for="titulo">Título de la obra *</label>
+            <input
+              type="text"
+              id="titulo"
+              required
+              placeholder="Ej. Noche estrellada"
+            />
+          </div>
+
+          <div class="form-row">
+            <label for="autor">Autor / Artista *</label>
+            <input
+              type="text"
+              id="autor"
+              required
+              placeholder="Nombre del artista"
+            />
+          </div>
+
+          <div class="form-row">
+            <label for="tecnica">Técnica *</label>
+            <input
+              type="text"
+              id="tecnica"
+              required
+              placeholder="Óleo, acuarela, digital…"
+            />
+          </div>
+
+          <div class="form-row">
+            <label for="anio">Año de creación</label>
+            <input
+              type="number"
+              id="anio"
+              min="1800"
+              max="2100"
+              placeholder="2024"
+            />
+          </div>
+
+          <div class="form-row">
+            <label for="dimensiones">Dimensiones</label>
+            <input
+              type="text"
+              id="dimensiones"
+              placeholder="Ej. 80 x 60 cm o 4000 x 3000 px"
+            />
+          </div>
+
+          <div class="form-row">
+            <label for="categoria">Categoría</label>
+            <input
+              type="text"
+              id="categoria"
+              placeholder="Pintura, ilustración, fotografía, etc."
+            />
+          </div>
+
+          <div class="form-row">
+            <label for="imagen">Imagen / archivo de la obra</label>
+            <input type="file" id="imagen" accept="image/*" />
+          </div>
+
+          <div class="form-row">
+            <label for="descripcion">Descripción</label>
+            <textarea
+              id="descripcion"
+              rows="3"
+              placeholder="Contexto, serie, inspiración…"
+            ></textarea>
+          </div>
+
+          <div class="form-row form-row-inline">
+            <label>
+              <input type="checkbox" id="acepto" />
+              Confirmo que tengo derechos para registrar esta obra.
+            </label>
+          </div>
+
+          <button type="submit" class="action-btn submit-btn">
+            Registrar obra
+          </button>
+        </form>
+      </section>
+    </main>
+
+    <script src="RegistrarObra.js"></script>
+  </body>
+</html>

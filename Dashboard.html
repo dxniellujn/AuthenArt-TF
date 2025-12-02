@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Dashboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="Dashboard.css" />
+  </head>
+  <body>
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <h2>AuthenArt</h2>
+        <button id="closeSidebar" class="icon-btn close-btn">✕</button>
+      </div>
+      <p id="username" class="username"></p>
+
+      <nav class="menu">
+        <a href="#" class="menu-item active">Resumen</a>
+        <a href="#" class="menu-item">Registrar obra</a>
+        <a href="#" class="menu-item">Mis obras</a>
+        <a href="#" class="menu-item">Verificar autenticidad</a>
+        <a href="#" class="menu-item">Reportes</a>
+      </nav>
+
+      <button id="logoutBtn" class="logout-btn">Cerrar sesión</button>
+    </aside>
+
+    <main class="content">
+      <header class="content-header">
+        <button id="toggleSidebar" class="icon-btn menu-btn">☰</button>
+        <div>
+          <h1>Dashboard</h1>
+          <span class="subtitle"
+            >Panel principal de autenticación de obras</span
+          >
+        </div>
+      </header>
+
+      <section class="cards">
+        <div class="card">
+          <h3>Obras registradas</h3>
+          <p class="number">24</p>
+          <p class="detail">Total de obras con certificado activo.</p>
+        </div>
+
+        <div class="card">
+          <h3>Verificaciones realizadas</h3>
+          <p class="number">57</p>
+          <p class="detail">Escaneos de códigos QR e imágenes.</p>
+        </div>
+
+        <div class="card">
+          <h3>Alertas de plagio</h3>
+          <p class="number alert">2</p>
+          <p class="detail">Casos que requieren revisión.</p>
+        </div>
+      </section>
+
+      <section class="panel">
+        <h2>Acciones rápidas</h2>
+        <div class="actions">
+          <button class="action-btn">➕ Registrar nueva obra</button>
+          <button class="action-btn">🔍 Verificar obra</button>
+          <button class="action-btn">📄 Generar reporte</button>
+        </div>
+      </section>
+    </main>
+
+    <script src="Dashboard.js"></script>
+  </body>
+</html>
